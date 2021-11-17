@@ -117,7 +117,7 @@ li {
   margin: 0 auto;
 }
 
-.banner .wrapper .slider, header .header-social-icons, header nav .nav-list, header .wrapper {
+.latest-work .wrapper .portfolio, .services .wrapper .services-list, .banner .wrapper .slider, header .header-social-icons, header nav .nav-list, header .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -138,6 +138,11 @@ header nav .nav-list {
 .banner .wrapper .slider .slide .slide-content {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+}
+
+.services .wrapper .services-list {
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 /*=================================
@@ -375,3 +380,113 @@ header .header-social-icons .linkedin::after {
 /*=================================
   help section styling ends here
 =================================*/
+/*======================================
+  services section styling starts here
+======================================*/
+.services .wrapper {
+  width: 60%;
+  text-align: center;
+  margin-bottom: 15px;
+}
+.services .wrapper h2 {
+  padding: 46px 0 53px;
+  color: #3c3b3b;
+  font: 600 18px Arial;
+  text-transform: uppercase;
+}
+.services .wrapper .services-list .service-item {
+  width: 20%;
+  padding: 0 0 13px;
+}
+.services .wrapper .services-list .service-item:nth-child(5) figure {
+  margin: 18px 0 17px;
+}
+.services .wrapper .services-list .service-item:nth-child(1), .services .wrapper .services-list .service-item:nth-child(7) {
+  -webkit-transform: translate(0, -7px);
+  -ms-transform: translate(0, -7px);
+  transform: translate(0, -7px);
+}
+.services .wrapper .services-list .service-item span {
+  padding: 22px 15%;
+  color: #555555;
+  display: block;
+  font: 600 12px Arial;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+.services .wrapper .services-list .service-item img {
+  width: 52%;
+}
+.services .wrapper .services-list .service-item a {
+  margin: 35px 0 12px;
+  display: inline-block;
+  text-indent: -9999px;
+  position: relative;
+}
+.services .wrapper .services-list .service-item a::after {
+  position: absolute;
+  right: 0;
+  color: #eb6137;
+  content: "\f061";
+  font: 25px "FontAwesome";
+  text-indent: 0;
+}
+.services .wrapper .services-list .service-item a::after {
+  margin: 0 2% 0 0;
+}
+
+/*====================================
+  services section styling ends here
+====================================*/
+/*=======================================
+  latest-work section styling starts here
+=======================================*/
+.latest-work {
+  background: #efefef;
+}
+.latest-work .wrapper {
+  width: 100%;
+  text-align: center;
+}
+.latest-work .wrapper h2 {
+  padding: 64px 0 16px;
+  color: #3c3b3b;
+  font: 600 18px Arial;
+  text-transform: uppercase;
+}
+.latest-work .wrapper a {
+  margin: 0 0 25px;
+  color: #3c3b3b;
+  font: 600 11px "Arial Narrow";
+  text-transform: uppercase;
+}
+.latest-work .wrapper .portfolio {
+  position: relative;
+}
+.latest-work .wrapper .portfolio .portfolio-item {
+  width: 25%;
+  cursor: pointer;
+  opacity: 1;
+  -webkit-transition: all 0.15s ease-in-out;
+  -o-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+}
+.latest-work .wrapper .portfolio::before, .latest-work .wrapper .portfolio::after {
+  content: "";
+  width: 100%;
+  padding: 9.5px 0;
+  position: absolute;
+  z-index: 2;
+}
+.latest-work .wrapper .portfolio::before {
+  top: 0px;
+  background: #efefef;
+}
+.latest-work .wrapper .portfolio::after {
+  bottom: 0px;
+  background: #eb6137;
+}
+
+/*======================================
+  latest-work section styling ends here
+======================================*/
