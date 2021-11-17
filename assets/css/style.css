@@ -353,3 +353,25 @@ header .header-social-icons .linkedin::after {
 /*=================================
   banner styling ends here
 =================================*/
+/*=================================
+  help section styling starts here
+=================================*/
+.help {
+  padding: 0 0 58px;
+  text-align: center;
+}
+.help h2 {
+  padding: 21px 0 36px;
+  color: #3c3b3b;
+  font: 600 18px Arial;
+  text-transform: uppercase;
+}
+.help p {
+  color: #555555;
+  font-size: 12px;
+  line-height: 1.82;
+}
+
+/*=================================
+  help section styling ends here
+=================================*/
