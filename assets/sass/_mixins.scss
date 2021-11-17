@@ -1,0 +1,25 @@
+@mixin transform($valX, $valY) {
+    -webkit-transform: translate($valX, $valY);
+    -ms-transform: translate($valX, $valY);
+    transform: translate($valX, $valY);
+}
+
+@mixin set-icon( $icon-hexa-code ,$icon-color, $icon-size ) {
+    display: inline-block;
+    text-indent: -9999px;
+    position: relative;
+    &::after {
+        position: absolute;
+        right: 0;
+        color: $icon-color;
+        content: quote($icon-hexa-code);
+        font: $icon-size "FontAwesome";
+        text-indent: 0;
+    }
+}
+
+@mixin set-transition( $transitionVal ) {
+    -webkit-transition: $transitionVal;
+    -o-transition: $transitionVal;
+    transition: $transitionVal;
+}

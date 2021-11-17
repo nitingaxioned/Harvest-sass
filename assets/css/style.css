@@ -116,3 +116,128 @@ li {
   width: 58.3%;
   margin: 0 auto;
 }
+
+header .header-social-icons, header nav .nav-list, header .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .header-social-icons, header .wrapper {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+header nav .nav-list {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+/*=================================
+  Header styling starts here
+=================================*/
+header {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  background-color: #ffffff;
+  z-index: 1;
+}
+header .wrapper {
+  width: 97%;
+  padding: 13px 0 12px;
+}
+header nav {
+  width: 80%;
+}
+header nav .nav-list {
+  margin: 6px 1.95% 0 0;
+}
+header nav .nav-list li {
+  margin: 0 0.7% 0 1.97%;
+  text-transform: uppercase;
+  font-size: 10px;
+  letter-spacing: 0.2px;
+}
+header nav .nav-list li a {
+  color: #3c3b3b;
+  -webkit-transition: color 0.15s ease-in-out;
+  -o-transition: color 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out;
+}
+header nav .nav-list li .active-nav-item {
+  color: #eb6137;
+}
+header .header-social-icons {
+  width: 3.9%;
+  padding: 2px 0;
+  -webkit-transform: translate(-9%, 0);
+  -ms-transform: translate(-9%, 0);
+  transform: translate(-9%, 0);
+}
+header .header-social-icons a {
+  padding: 0 20%;
+}
+header .header-social-icons a::after {
+  -webkit-transition: color 0.15s ease-in-out;
+  -o-transition: color 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out;
+}
+header .header-social-icons .facebook {
+  display: inline-block;
+  text-indent: -9999px;
+  position: relative;
+}
+header .header-social-icons .facebook::after {
+  position: absolute;
+  right: 0;
+  color: #eb6137;
+  content: "\f082";
+  font: 11px "FontAwesome";
+  text-indent: 0;
+}
+header .header-social-icons .twitter {
+  display: inline-block;
+  text-indent: -9999px;
+  position: relative;
+}
+header .header-social-icons .twitter::after {
+  position: absolute;
+  right: 0;
+  color: #eb6137;
+  content: "\f099";
+  font: 11px "FontAwesome";
+  text-indent: 0;
+}
+header .header-social-icons .instagram {
+  display: inline-block;
+  text-indent: -9999px;
+  position: relative;
+}
+header .header-social-icons .instagram::after {
+  position: absolute;
+  right: 0;
+  color: #eb6137;
+  content: "\f16d";
+  font: 11px "FontAwesome";
+  text-indent: 0;
+}
+header .header-social-icons .linkedin {
+  display: inline-block;
+  text-indent: -9999px;
+  position: relative;
+}
+header .header-social-icons .linkedin::after {
+  position: absolute;
+  right: 0;
+  color: #eb6137;
+  content: "\f0e1";
+  font: 11px "FontAwesome";
+  text-indent: 0;
+}
+
+/*=================================
+  Header styling ends here
+=================================*/
