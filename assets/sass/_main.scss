@@ -1,0 +1,92 @@
+/*=================================
+  main styling starts here for index
+=================================*/
+
+/*=================================
+  banner styling starts here
+=================================*/
+
+.banner{
+    .wrapper{
+        width: 100%; 
+        overflow: hidden;
+        position: relative;
+
+        .slider{
+            @extend %display-flex;
+
+            .slide{
+                min-width: 100%;
+                position: relative;
+
+                .slide-content{
+                    @extend %box-sizing-border-box;
+                    width: 50%;
+                    padding: 15.5px 1.1%;
+                    position: absolute;
+                    top: 282px;
+                    left: 50%;
+                    background-color: $prime-color;
+                    color: $secondary-font-color;
+                    font-size: 14px;
+                    letter-spacing: 0.5px;
+
+                    span{ text-transform: uppercase; }
+                }
+
+                a{
+                    padding: 6.5px 1.6% 10.5px 1.1%;
+                    position: absolute;
+                    top: 359px;
+                    left: 50%;
+                    background-color: #ffffff;
+                    color: $prime-color;
+                    font-size: 8px;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    letter-spacing: 0.3px;
+                    @include set-transition( all .15s ease-in-out );
+
+                    &::after{
+                        content: "\f105";
+                        position: relative;
+                        top: 1px;
+                        right: -10%;
+                        font: 13px "FontAwesome";
+                    }
+                }
+            }
+        }
+
+        .slider-transition{ @include set-transition( all .5s ease-in-out ) }
+
+        .slider-controls{
+            width: 100%;
+            position: absolute;
+            top: 206px;
+            left: 0;
+
+            a{
+                display: inline-block;
+                text-indent: -9999px;
+                position: absolute;
+                @include set-transition( all .15s ease-in-out );
+                color: #dfe7f0;
+            }
+
+            .previous-slider-btn{ 
+                @include set-icon( \f053 , #dfe7f0, 14px );
+                &::after{left:  7vw;}
+            }
+
+            .next-slider-btn{  
+                @include set-icon( \f054 , #dfe7f0, 14px );
+                &::after{left: 91vw;}
+            }
+        }
+    }
+}
+
+/*=================================
+  banner styling ends here
+=================================*/

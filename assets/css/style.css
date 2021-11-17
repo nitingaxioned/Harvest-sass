@@ -117,7 +117,7 @@ li {
   margin: 0 auto;
 }
 
-header .header-social-icons, header nav .nav-list, header .wrapper {
+.banner .wrapper .slider, header .header-social-icons, header nav .nav-list, header .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -133,6 +133,11 @@ header nav .nav-list {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+}
+
+.banner .wrapper .slider .slide .slide-content {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /*=================================
@@ -240,4 +245,111 @@ header .header-social-icons .linkedin::after {
 
 /*=================================
   Header styling ends here
+=================================*/
+/*=================================
+  main styling starts here for index
+=================================*/
+/*=================================
+  banner styling starts here
+=================================*/
+.banner .wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.banner .wrapper .slider .slide {
+  min-width: 100%;
+  position: relative;
+}
+.banner .wrapper .slider .slide .slide-content {
+  width: 50%;
+  padding: 15.5px 1.1%;
+  position: absolute;
+  top: 282px;
+  left: 50%;
+  background-color: #eb6137;
+  color: #ffffff;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+}
+.banner .wrapper .slider .slide .slide-content span {
+  text-transform: uppercase;
+}
+.banner .wrapper .slider .slide a {
+  padding: 6.5px 1.6% 10.5px 1.1%;
+  position: absolute;
+  top: 359px;
+  left: 50%;
+  background-color: #ffffff;
+  color: #eb6137;
+  font-size: 8px;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.3px;
+  -webkit-transition: all 0.15s ease-in-out;
+  -o-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+}
+.banner .wrapper .slider .slide a::after {
+  content: "\f105";
+  position: relative;
+  top: 1px;
+  right: -10%;
+  font: 13px "FontAwesome";
+}
+.banner .wrapper .slider-transition {
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+.banner .wrapper .slider-controls {
+  width: 100%;
+  position: absolute;
+  top: 206px;
+  left: 0;
+}
+.banner .wrapper .slider-controls a {
+  display: inline-block;
+  text-indent: -9999px;
+  position: absolute;
+  -webkit-transition: all 0.15s ease-in-out;
+  -o-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+  color: #dfe7f0;
+}
+.banner .wrapper .slider-controls .previous-slider-btn {
+  display: inline-block;
+  text-indent: -9999px;
+  position: relative;
+}
+.banner .wrapper .slider-controls .previous-slider-btn::after {
+  position: absolute;
+  right: 0;
+  color: #dfe7f0;
+  content: "\f053";
+  font: 14px "FontAwesome";
+  text-indent: 0;
+}
+.banner .wrapper .slider-controls .previous-slider-btn::after {
+  left: 7vw;
+}
+.banner .wrapper .slider-controls .next-slider-btn {
+  display: inline-block;
+  text-indent: -9999px;
+  position: relative;
+}
+.banner .wrapper .slider-controls .next-slider-btn::after {
+  position: absolute;
+  right: 0;
+  color: #dfe7f0;
+  content: "\f054";
+  font: 14px "FontAwesome";
+  text-indent: 0;
+}
+.banner .wrapper .slider-controls .next-slider-btn::after {
+  left: 91vw;
+}
+
+/*=================================
+  banner styling ends here
 =================================*/
