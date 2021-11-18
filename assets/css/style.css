@@ -117,13 +117,13 @@ li {
   margin: 0 auto;
 }
 
-.work-with .clients, .latest-work .wrapper .portfolio, .services .wrapper .services-list, .banner .wrapper .slider, header .header-social-icons, header nav .nav-list, header .wrapper {
+.work-with .clients, .work-with .affiliations .wrapper .affiliated-partners, .affiliations .wrapper .work-with .affiliated-partners, .latest-work .wrapper .portfolio, .services .wrapper .services-list, .banner .wrapper .slider, header .header-social-icons, header nav .nav-list, header .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.work-with .clients, header .header-social-icons, header .wrapper {
+.work-with .clients, .work-with .affiliations .wrapper .affiliated-partners, .affiliations .wrapper .work-with .affiliated-partners, header .header-social-icons, header .wrapper {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
@@ -140,12 +140,12 @@ header nav .nav-list {
   box-sizing: border-box;
 }
 
-.work-with .clients, .services .wrapper .services-list {
+.work-with .clients, .work-with .affiliations .wrapper .affiliated-partners, .affiliations .wrapper .work-with .affiliated-partners, .services .wrapper .services-list {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 
-.work-with .clients {
+.work-with .clients, .work-with .affiliations .wrapper .affiliated-partners, .affiliations .wrapper .work-with .affiliated-partners {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -550,7 +550,7 @@ header .header-social-icons .linkedin::after {
   font: 600 18px Arial;
   text-transform: uppercase;
 }
-.work-with .clients .client {
+.work-with .clients .client, .work-with .affiliations .wrapper .affiliated-partners .client, .affiliations .wrapper .work-with .affiliated-partners .client {
   width: 17.8%;
   margin-bottom: 7px;
 }
@@ -558,3 +558,35 @@ header .header-social-icons .linkedin::after {
 /*======================================
  work with  section styling ends here
 ======================================*/
+/*=========================================
+  affiliations section styling starts here
+=========================================*/
+.affiliations {
+  padding-bottom: 64px;
+  background: #f3f3f3;
+  text-align: center;
+}
+.affiliations .wrapper {
+  width: 58.3%;
+}
+.affiliations .wrapper h2 {
+  padding-top: 65px;
+  margin-bottom: 15px;
+  color: #3c3b3b;
+  font: 600 18px Arial;
+  text-transform: uppercase;
+}
+.affiliations .wrapper .affiliated-partners {
+  margin-top: 35px;
+}
+.affiliations .wrapper .affiliated-partners .affiliated-partner {
+  width: 22.95%;
+  margin-bottom: 21px;
+  -webkit-transition: all 0.15s ease-in-out;
+  -o-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+}
+
+/*========================================
+ affiliations  section styling ends here
+========================================*/

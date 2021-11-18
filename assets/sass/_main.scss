@@ -303,3 +303,39 @@
 /*======================================
  work with  section styling ends here
 ======================================*/
+
+/*=========================================
+  affiliations section styling starts here
+=========================================*/
+
+.affiliations {
+    padding-bottom: 64px;
+    background: #f3f3f3;
+    text-align: center;
+
+    .wrapper{ 
+        width: 58.3%; 
+    
+        h2 {
+            padding-top: 65px;
+            margin-bottom: 15px;
+            color: $base-font-color;
+            font: 600 18px $font-family;
+            text-transform: uppercase;
+        }
+
+        .affiliated-partners {
+            margin-top: 35px;
+            @extend .clients;
+
+            .affiliated-partner {
+                width: 22.95%;
+                margin-bottom: 21px;
+                @include set-transition( all .15s ease-in-out );
+            }
+        }
+    }
+}
+/*========================================
+ affiliations  section styling ends here
+========================================*/
