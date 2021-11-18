@@ -496,6 +496,44 @@ header .header-social-icons .linkedin::after {
 /*======================================
   latest-work section styling ends here
 ======================================*/
+/*==============================================
+  latest-work modal section styling starts here
+==============================================*/
+.latest-work-modal {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+.latest-work-modal::after {
+  content: "\f00d";
+  position: fixed;
+  top: 20px;
+  right: 1.5%;
+  color: #ffffff;
+  font-family: FontAwesome;
+  font-size: 28px;
+  cursor: pointer;
+}
+.latest-work-modal figure {
+  width: 80%;
+  max-width: 500px;
+  margin: 50vh 0 0 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.hide-me {
+  display: none;
+}
+
+/*=============================================
+ latest-work modal section styling ends here
+=============================================*/
 /*=======================================
   work with section styling starts here
 =======================================*/
