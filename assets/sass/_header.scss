@@ -45,7 +45,7 @@ header{
         padding: 2px 0;
         @extend %display-flex;
         @extend %justify-content-space-between; 
-        @include transform(-9%, 0);
+        @include translate(-9%, 0);
 
         a{
             padding: 0 20%;
