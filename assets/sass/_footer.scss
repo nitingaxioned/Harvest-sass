@@ -1,0 +1,111 @@
+/*=================================
+  footer styling starts here
+=================================*/ 
+
+footer {
+    padding-bottom: 12px;
+    background: #3c3b3b;
+    color: $footer-font-color;
+    text-align: center;
+    font-size: 11.5px; 
+
+    a,
+    p { color: $footer-font-color; }
+    p { margin: 25px 0 40px; }
+
+    h5 {
+        padding: 64px 0 23px 0;
+        font: 600 18px Arial;
+        text-transform: capitalize;
+        text-align: left;
+    }
+
+    .company-info { @extend %display-flex; }
+}
+  
+.get-in-touch-company {
+    @extend %display-flex;
+    @extend %flex-direction-column;
+
+    h5 {
+        padding: 64px 0 20px 0;
+    }
+
+    ul {
+        width: 73%;
+        margin-left: 10%;
+        @extend %display-flex;
+        @extend %flex-direction-column;
+        text-align: left;
+
+        li { 
+            padding: 0 0 8px; 
+
+            a,
+            address {
+                font-size: 11px;
+                text-transform: uppercase;
+                line-height: 17px;
+
+                &::after {
+                    float: left;
+                    top: 3px;
+                    left: -15px;
+                }
+            }
+
+            .telephone { 
+                @include set-icon( \f095 , $footer-font-color, 11px ); 
+                text-indent: 0; 
+            }
+            
+            .infoMail { 
+                @include set-icon( \f0e0 , $footer-font-color, 11px ); 
+                text-indent: 0; 
+            }
+
+            .Co-Address { 
+                @include set-icon( \f041 , $footer-font-color, 11px );
+                text-indent: 0;  
+            }
+        }
+    }
+}
+  
+.information {
+    width: 25%;
+    margin-left: 6.5%;
+    @extend %display-flex;
+    @extend %flex-direction-column;
+    text-align: left;
+
+    ul{
+        width: 100%;
+        @extend %display-flex;
+        @extend %flex-direction-column;
+        text-align: left;
+        text-align: left;
+    }
+
+    li { padding: 0 0 12px; }
+}
+  
+.footer-social-icons { 
+    
+    padding-bottom: 27px; 
+
+    a { 
+        padding: 3px 3.5px; 
+        width: 23px;
+        &::after{ float: right; }
+    }
+
+    .facebook { @include set-icon( \f082 , $footer-font-color, 23px ) }
+    .twitter { @include set-icon( \f099 , $footer-font-color, 23px ) }
+    .instagram { @include set-icon( \f16d , $footer-font-color, 23px ) }
+    .linkedin { @include set-icon( \f0e1 , $footer-font-color, 23px ) }
+}
+
+/*=================================
+    footer styling ends here
+=================================*/ 

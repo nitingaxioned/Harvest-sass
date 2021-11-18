@@ -1,0 +1,497 @@
+/*=================================
+  main styling starts here for index
+=================================*/
+
+/*=================================
+  banner styling starts here
+=================================*/
+
+.banner{
+    .wrapper{
+        width: 100%; 
+        overflow: hidden;
+        position: relative;
+
+        .slider{
+            @extend %display-flex;
+
+            .slide{
+                min-width: 100%;
+                position: relative;
+
+                .slide-content{
+                    @extend %box-sizing-border-box;
+                    width: 50%;
+                    padding: 15.5px 1.1%;
+                    position: absolute;
+                    top: 282px;
+                    left: 50%;
+                    background-color: $prime-color;
+                    color: $secondary-font-color;
+                    font-size: 14px;
+                    letter-spacing: 0.5px;
+
+                    span{ text-transform: uppercase; }
+                }
+
+                a{
+                    padding: 6.5px 1.6% 10.5px 1.1%;
+                    position: absolute;
+                    top: 359px;
+                    left: 50%;
+                    background-color: #ffffff;
+                    color: $prime-color;
+                    font-size: 8px;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    letter-spacing: 0.3px;
+                    @include set-transition( all .15s ease-in-out );
+
+                    &::after{
+                        content: "\f105";
+                        position: relative;
+                        top: 1px;
+                        right: -10%;
+                        font: 13px "FontAwesome";
+                    }
+                }
+            }
+        }
+
+        .slider-transition{ @include set-transition( all .5s ease-in-out ) }
+
+        .slider-controls{
+            width: 100%;
+            position: absolute;
+            top: 206px;
+            left: 0;
+
+            a{
+                display: inline-block;
+                text-indent: -9999px;
+                position: absolute;
+                @include set-transition( all .15s ease-in-out );
+                color: #dfe7f0;
+            }
+
+            .previous-slider-btn{ 
+                @include set-icon( \f053 , #dfe7f0, 14px );
+                &::after{left:  7vw;}
+            }
+
+            .next-slider-btn{  
+                @include set-icon( \f054 , #dfe7f0, 14px );
+                &::after{left: 91vw;}
+            }
+        }
+    }
+}
+
+/*=================================
+  banner styling ends here
+=================================*/
+
+/*=================================
+  help section styling starts here
+=================================*/
+
+.help { 
+    padding: 37px 0 58px;
+    text-align: center;
+
+    h2{
+        padding: 21px 0 36px;
+        color: $base-font-color;
+        font: 600 18px $font-family;
+        text-transform: uppercase;
+    }
+
+    p{
+        color: $light-font-color;
+        font-size: 12px;
+        line-height: 1.82;
+    }
+}
+  
+/*=================================
+  help section styling ends here
+=================================*/
+
+/*======================================
+  services section styling starts here
+======================================*/
+
+.services .wrapper { 
+    width: 60%;
+    text-align: center;
+    margin-bottom: 15px;
+
+    h2 {
+        padding: 46px 0 53px;
+        color: $base-font-color;
+        font: 600 18px $font-family;
+        text-transform: uppercase;
+    }
+
+    .services-list {
+        @extend %display-flex;
+        @extend %flex-wrap;
+
+        .service-item { 
+            width: 20%; 
+            padding: 0 0 13px;
+
+            &:nth-child(5) figure { margin: 18px 0 17px; }
+            &:nth-child(1),
+            &:nth-child(7) { @include translate(0, -7px); }
+
+            span {
+                padding: 22px 15%;
+                color: $light-font-color;
+                display: block;
+                font: 600 12px $font-family;
+                letter-spacing: 0.5px;
+                text-transform: uppercase;
+            }
+
+            img { width: 52%; }
+
+        }
+
+        .service-icon{
+            a {
+                margin: 35px 0 12px;
+                @include set-icon( \f061 ,$prime-color, 25px );
+
+                &::after{ 
+                    margin: 0 2% 0 0; 
+                    float: right;
+                }
+            }
+        }
+    }
+}
+
+/*====================================
+  services section styling ends here
+====================================*/
+
+/*=======================================
+  latest-work section styling starts here
+=======================================*/
+
+.latest-work { 
+    background: #efefef; 
+
+    .wrapper{
+        width: 100%;
+        text-align: center;
+
+        h2 {
+            padding: 64px 0 16px;
+            color: $base-font-color;
+            font: 600 18px $font-family;
+            text-transform: uppercase;
+        }
+
+        a {
+            margin: 0 0 25px;
+            color: $base-font-color;
+            font: 600 11px "Arial Narrow";
+            text-transform: uppercase;
+        }
+
+        .portfolio {
+            position: relative;
+            @extend %display-flex;
+
+            .portfolio-item {
+                width: 25%;
+                cursor: pointer;
+                opacity: 1;
+                @include set-transition( all .15s ease-in-out );
+            }
+
+            &::before,
+            &::after{
+              content: "";
+              width: 100%;
+              padding: 9.5px 0;
+              position: absolute;
+              z-index: 2;
+            }
+
+            &::before{
+                top: 0px;
+                background: #efefef;
+            }
+              
+            &::after{
+                bottom: 0px;
+                background: $prime-color;
+            }
+        }
+    }
+}
+
+/*======================================
+  latest-work section styling ends here
+======================================*/
+
+/*==============================================
+  latest-work modal section styling starts here
+==============================================*/
+
+.latest-work-modal {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+
+    &::after{
+        content: "\f00d";
+        position: fixed;
+        top: 20px;
+        right: 1.5%;
+        color: #ffffff;
+        font-family: FontAwesome;
+        font-size: 28px;
+        cursor: pointer;
+    }
+
+    figure{
+        width: 80%;
+        max-width: 500px;
+        margin: 50vh 0 0 50%;
+        @include translate(-50%, -50%);
+    }
+}
+
+.hide-me{ display: none; }
+  
+/*=============================================
+ latest-work modal section styling ends here
+=============================================*/
+
+/*=======================================
+  work with section styling starts here
+=======================================*/
+
+.work-with {
+    position: relative;
+    z-index: 1;
+    padding-bottom: 62px;
+    background: $prime-color;
+    text-align: center;
+
+    h2 {
+        padding: 46px 0 33px 0;
+        color: #ffffff;
+        font: 600 18px $font-family;
+        text-transform: uppercase;
+    }
+
+    .clients {
+        @extend %display-flex;
+        @extend %justify-content-space-between;
+        @extend %align-items-center;
+        @extend %flex-wrap;
+
+        .client { 
+            width: 17.8%; 
+            margin-bottom: 7px;
+        }
+    }
+}
+
+/*======================================
+ work with  section styling ends here
+======================================*/
+
+/*=========================================
+  affiliations section styling starts here
+=========================================*/
+
+.affiliations {
+    padding-bottom: 64px;
+    background: #f3f3f3;
+    text-align: center;
+
+    .wrapper{ 
+        width: 58.3%; 
+    
+        h2 {
+            padding-top: 65px;
+            margin-bottom: 15px;
+            color: $base-font-color;
+            font: 600 18px $font-family;
+            text-transform: uppercase;
+        }
+
+        .affiliated-partners {
+            margin-top: 35px;
+            @extend %display-flex;
+            @extend %justify-content-space-between;
+            @extend %align-items-center;
+            @extend %flex-wrap;
+            
+            .affiliated-partner {
+                width: 22.95%;
+                margin-bottom: 21px;
+                @include set-transition( all .15s ease-in-out );
+            }
+        }
+    }
+}
+/*========================================
+ affiliations  section styling ends here
+========================================*/
+
+/*=========================================
+ Get in touch section styling starts here
+=========================================*/
+
+.get-in-touch {
+    padding-bottom: 56px;
+    background: #003e59;
+    color: #ffffff;
+    text-align: center;
+
+    h2 {
+        padding: 50px 0 31px 0;
+        font: 600 22px $font-family;
+    }
+
+    form { 
+        
+        @extend %display-flex; 
+    
+        .form-groups{ 
+            width: 50%; 
+            &:last-of-type { margin: 3px 0 0 2.56%;}
+
+            .form-group {
+                @extend %display-flex;
+                @extend %flex-direction-column;
+                position: relative;
+
+                label {
+                    margin-bottom: 5px;
+                    font-size: 13px;
+                    text-align: left;
+                }
+
+                textarea,
+                input,
+                #enquiries {
+                    @extend %box-sizing-border-box;
+                    width: 100%;
+                    padding: 10px 1.2%;
+                    margin-bottom: 15px;
+                    border: none;
+                    background: #ffffff;
+                }
+                
+                #enquiries { 
+                    color: #555555;
+                    font-size: 12px;
+                    margin-top: 4px;
+                    padding: 9px 1.2%;
+                }
+
+                textarea,
+                input:focus ,
+                #enquiries:focus { outline: none; }
+                
+                .error{ 
+                    position: absolute;
+                    top: 2px;
+                    right: 0.1%;
+                    color: #ff5555;
+                    font: 14px "Arial Narrow";
+                }
+                
+                textarea{ min-height: 86px; }
+            }
+
+            .checkbox-group{ 
+                @extend %flex-direction-row; 
+                a{ color: $prime-color; }
+
+                input{ 
+                    width: 2.5%;
+                    @include translate(-4px, -4px);
+                }
+
+                label{
+                    display: inline;
+                    line-height: 18px;
+                    margin: 0;
+                }
+            }
+
+            p {
+                margin: 9px 1% 10px;
+                font-size: 12px;
+                line-height: 1.4;
+                text-align: left;
+            }
+
+            .form-control{
+
+                &:last-of-type {
+                    width: 100%;
+                    display: inline-block;
+                }
+
+                #submit {
+                    margin: 13px 3.8% 0 0;
+                    padding: 11px 5.2%;
+                    border: 1px solid transparent;
+                    background: $prime-color;
+                    color: #ffffff;
+                    font: 600 11px $font-family;
+                    right: 2%;
+                    float: right;
+                    @include set-transition( all .15s ease-in-out );
+                    outline: none;
+                  } 
+            }
+        }
+    }
+}
+   
+.form-sumit-modal{
+    @extend %box-sizing-border-box;
+    width: 50%;
+    padding: 40px 5%;
+    margin: 50vh 0 0 50%;
+    background-color: #ffffff;
+    border-radius: 25px;
+    font: 25px $font-family;
+    line-height: 35px;
+    @include translate(-50%, -50%);
+
+    p{ color: $base-font-color; }
+    name{ color: $prime-color; }
+
+    a{ 
+        margin: 35px 0 0;
+        padding: 11px 5.2%;
+        border: 1px solid transparent;
+        background: $prime-color;
+        color: #ffffff;
+        font: 600 18px $font-family;
+    }
+}
+  
+/*======================================
+ Get in touch section styling ends here
+======================================*/
+  
+/*=================================
+ main styling ends here for index
+==================================*/

@@ -1,0 +1,61 @@
+@mixin translate($valX, $valY) {
+    -webkit-transform: translate($valX, $valY);
+    -ms-transform: translate($valX, $valY);
+    transform: translate($valX, $valY);
+}
+
+@mixin scale($scale){
+    -webkit-transform: scale($scale); 
+    -ms-transform: scale($scale); 
+    transform: scale($scale); 
+}
+
+@mixin box-shadow($shado) {
+    -webkit-box-shadow: $shado; 
+    box-shadow: $shado;
+}
+
+@mixin set-icon( $icon-hexa-code ,$icon-color, $icon-size ) {
+    display: inline-block;
+    text-indent: -9999px;
+    position: relative;
+    &::after {
+        position: absolute;
+        right: 0;
+        color: $icon-color;
+        content: quote($icon-hexa-code);
+        font: $icon-size "FontAwesome";
+        text-indent: 0;
+    }
+}
+
+@mixin set-transition( $transitionVal ) {
+    -webkit-transition: $transitionVal;
+    -o-transition: $transitionVal;
+    transition: $transitionVal;
+}
+
+@mixin flex-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+@mixin flex-direction-column {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+@mixin align-items-center {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+@mixin justify-content-flex-start {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+}
