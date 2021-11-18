@@ -96,7 +96,7 @@
 =================================*/
 
 .help { 
-    padding: 0 0 58px;
+    padding: 37px 0 58px;
     text-align: center;
 
     h2{
@@ -156,10 +156,17 @@
 
             img { width: 52%; }
 
+        }
+
+        .service-icon{
             a {
                 margin: 35px 0 12px;
                 @include set-icon( \f061 ,$prime-color, 25px );
-                &::after{ margin: 0 2% 0 0; }
+
+                &::after{ 
+                    margin: 0 2% 0 0; 
+                    float: right;
+                }
             }
         }
     }
@@ -326,8 +333,11 @@
 
         .affiliated-partners {
             margin-top: 35px;
-            @extend .clients;
-
+            @extend %display-flex;
+            @extend %justify-content-space-between;
+            @extend %align-items-center;
+            @extend %flex-wrap;
+            
             .affiliated-partner {
                 width: 22.95%;
                 margin-bottom: 21px;
@@ -375,7 +385,7 @@
                 }
 
                 textarea,
-                .form-group input,
+                input,
                 #enquiries {
                     @extend %box-sizing-border-box;
                     width: 100%;
@@ -393,7 +403,7 @@
                 }
 
                 textarea,
-                .form-group input:focus ,
+                input:focus ,
                 #enquiries:focus { outline: none; }
                 
                 .error{ 

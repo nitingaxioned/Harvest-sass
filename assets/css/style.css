@@ -117,13 +117,13 @@ li {
   margin: 0 auto;
 }
 
-.get-in-touch form .form-groups .form-group, .get-in-touch form, .work-with .clients, .work-with .affiliations .wrapper .affiliated-partners, .affiliations .wrapper .work-with .affiliated-partners, .latest-work .wrapper .portfolio, .services .wrapper .services-list, .banner .wrapper .slider, header .header-social-icons, header nav .nav-list, header .wrapper {
+.information ul, .information, .get-in-touch-company ul, .get-in-touch-company, footer .company-info, .get-in-touch form .form-groups .form-group, .get-in-touch form, .affiliations .wrapper .affiliated-partners, .work-with .clients, .latest-work .wrapper .portfolio, .services .wrapper .services-list, .banner .wrapper .slider, header .header-social-icons, header nav .nav-list, header .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.work-with .clients, .work-with .affiliations .wrapper .affiliated-partners, .affiliations .wrapper .work-with .affiliated-partners, header .header-social-icons, header .wrapper {
+.affiliations .wrapper .affiliated-partners, .work-with .clients, header .header-social-icons, header .wrapper {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
@@ -136,24 +136,24 @@ header nav .nav-list {
 }
 
 .form-sumit-modal, .get-in-touch form .form-groups .form-group textarea,
-.get-in-touch form .form-groups .form-group .form-group input,
+.get-in-touch form .form-groups .form-group input,
 .get-in-touch form .form-groups .form-group #enquiries, .banner .wrapper .slider .slide .slide-content {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-.work-with .clients, .work-with .affiliations .wrapper .affiliated-partners, .affiliations .wrapper .work-with .affiliated-partners, .services .wrapper .services-list {
+.affiliations .wrapper .affiliated-partners, .work-with .clients, .services .wrapper .services-list {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 
-.work-with .clients, .work-with .affiliations .wrapper .affiliated-partners, .affiliations .wrapper .work-with .affiliated-partners {
+.affiliations .wrapper .affiliated-partners, .work-with .clients {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
 }
 
-.get-in-touch form .form-groups .form-group {
+.information ul, .information, .get-in-touch-company ul, .get-in-touch-company, .get-in-touch form .form-groups .form-group {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
@@ -384,7 +384,7 @@ header .header-social-icons .linkedin::after {
   help section styling starts here
 =================================*/
 .help {
-  padding: 0 0 58px;
+  padding: 37px 0 58px;
   text-align: center;
 }
 .help h2 {
@@ -439,13 +439,13 @@ header .header-social-icons .linkedin::after {
 .services .wrapper .services-list .service-item img {
   width: 52%;
 }
-.services .wrapper .services-list .service-item a {
+.services .wrapper .services-list .service-icon a {
   margin: 35px 0 12px;
   display: inline-block;
   text-indent: -9999px;
   position: relative;
 }
-.services .wrapper .services-list .service-item a::after {
+.services .wrapper .services-list .service-icon a::after {
   position: absolute;
   right: 0;
   color: #eb6137;
@@ -453,8 +453,9 @@ header .header-social-icons .linkedin::after {
   font: 25px "FontAwesome";
   text-indent: 0;
 }
-.services .wrapper .services-list .service-item a::after {
+.services .wrapper .services-list .service-icon a::after {
   margin: 0 2% 0 0;
+  float: right;
 }
 
 /*====================================
@@ -566,7 +567,7 @@ header .header-social-icons .linkedin::after {
   font: 600 18px Arial;
   text-transform: uppercase;
 }
-.work-with .clients .client, .work-with .affiliations .wrapper .affiliated-partners .client, .affiliations .wrapper .work-with .affiliated-partners .client {
+.work-with .clients .client {
   width: 17.8%;
   margin-bottom: 7px;
 }
@@ -634,7 +635,7 @@ header .header-social-icons .linkedin::after {
   text-align: left;
 }
 .get-in-touch form .form-groups .form-group textarea,
-.get-in-touch form .form-groups .form-group .form-group input,
+.get-in-touch form .form-groups .form-group input,
 .get-in-touch form .form-groups .form-group #enquiries {
   width: 100%;
   padding: 10px 1.2%;
@@ -649,7 +650,7 @@ header .header-social-icons .linkedin::after {
   padding: 9px 1.2%;
 }
 .get-in-touch form .form-groups .form-group textarea,
-.get-in-touch form .form-groups .form-group .form-group input:focus,
+.get-in-touch form .form-groups .form-group input:focus,
 .get-in-touch form .form-groups .form-group #enquiries:focus {
   outline: none;
 }
@@ -735,3 +736,172 @@ header .header-social-icons .linkedin::after {
 /*=================================
  main styling ends here for index
 ==================================*/
+/*=================================
+  footer styling starts here
+=================================*/
+footer {
+  padding-bottom: 12px;
+  background: #3c3b3b;
+  color: #ededed;
+  text-align: center;
+  font-size: 11.5px;
+}
+footer a,
+footer p {
+  color: #ededed;
+}
+footer p {
+  margin: 25px 0 40px;
+}
+footer h5 {
+  padding: 64px 0 23px 0;
+  font: 600 18px Arial;
+  text-transform: capitalize;
+  text-align: left;
+}
+.get-in-touch-company h5 {
+  padding: 64px 0 20px 0;
+}
+.get-in-touch-company ul {
+  width: 73%;
+  margin-left: 10%;
+  text-align: left;
+}
+.get-in-touch-company ul li {
+  padding: 0 0 8px;
+}
+.get-in-touch-company ul li a,
+.get-in-touch-company ul li address {
+  font-size: 11px;
+  text-transform: uppercase;
+  line-height: 17px;
+}
+.get-in-touch-company ul li a::after,
+.get-in-touch-company ul li address::after {
+  float: left;
+  top: 3px;
+  left: -15px;
+}
+.get-in-touch-company ul li .telephone {
+  display: inline-block;
+  text-indent: -9999px;
+  position: relative;
+  text-indent: 0;
+}
+.get-in-touch-company ul li .telephone::after {
+  position: absolute;
+  right: 0;
+  color: #ededed;
+  content: "\f095";
+  font: 11px "FontAwesome";
+  text-indent: 0;
+}
+.get-in-touch-company ul li .infoMail {
+  display: inline-block;
+  text-indent: -9999px;
+  position: relative;
+  text-indent: 0;
+}
+.get-in-touch-company ul li .infoMail::after {
+  position: absolute;
+  right: 0;
+  color: #ededed;
+  content: "\f0e0";
+  font: 11px "FontAwesome";
+  text-indent: 0;
+}
+.get-in-touch-company ul li .Co-Address {
+  display: inline-block;
+  text-indent: -9999px;
+  position: relative;
+  text-indent: 0;
+}
+.get-in-touch-company ul li .Co-Address::after {
+  position: absolute;
+  right: 0;
+  color: #ededed;
+  content: "\f041";
+  font: 11px "FontAwesome";
+  text-indent: 0;
+}
+
+.information {
+  width: 25%;
+  margin-left: 6.5%;
+  text-align: left;
+}
+.information ul {
+  width: 100%;
+  text-align: left;
+  text-align: left;
+}
+.information li {
+  padding: 0 0 12px;
+}
+
+.footer-social-icons {
+  padding-bottom: 27px;
+}
+.footer-social-icons a {
+  padding: 3px 3.5px;
+  width: 23px;
+}
+.footer-social-icons a::after {
+  float: right;
+}
+.footer-social-icons .facebook {
+  display: inline-block;
+  text-indent: -9999px;
+  position: relative;
+}
+.footer-social-icons .facebook::after {
+  position: absolute;
+  right: 0;
+  color: #ededed;
+  content: "\f082";
+  font: 23px "FontAwesome";
+  text-indent: 0;
+}
+.footer-social-icons .twitter {
+  display: inline-block;
+  text-indent: -9999px;
+  position: relative;
+}
+.footer-social-icons .twitter::after {
+  position: absolute;
+  right: 0;
+  color: #ededed;
+  content: "\f099";
+  font: 23px "FontAwesome";
+  text-indent: 0;
+}
+.footer-social-icons .instagram {
+  display: inline-block;
+  text-indent: -9999px;
+  position: relative;
+}
+.footer-social-icons .instagram::after {
+  position: absolute;
+  right: 0;
+  color: #ededed;
+  content: "\f16d";
+  font: 23px "FontAwesome";
+  text-indent: 0;
+}
+.footer-social-icons .linkedin {
+  display: inline-block;
+  text-indent: -9999px;
+  position: relative;
+}
+.footer-social-icons .linkedin::after {
+  position: absolute;
+  right: 0;
+  color: #ededed;
+  content: "\f0e1";
+  font: 23px "FontAwesome";
+  text-indent: 0;
+}
+
+/*=================================
+    footer styling ends here
+=================================*/

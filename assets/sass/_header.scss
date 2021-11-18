@@ -50,7 +50,6 @@ header{
         a{
             padding: 0 20%;
             &::after { @include set-transition( color .15s ease-in-out ) }
-            
         }
 
         .facebook { @include set-icon( \f082 , $prime-color, 11px ) }
