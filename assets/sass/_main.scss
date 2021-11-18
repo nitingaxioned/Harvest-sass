@@ -339,3 +339,149 @@
 /*========================================
  affiliations  section styling ends here
 ========================================*/
+
+/*=========================================
+ Get in touch section styling starts here
+=========================================*/
+
+.get-in-touch {
+    padding-bottom: 56px;
+    background: #003e59;
+    color: #ffffff;
+    text-align: center;
+
+    h2 {
+        padding: 50px 0 31px 0;
+        font: 600 22px $font-family;
+    }
+
+    form { 
+        
+        @extend %display-flex; 
+    
+        .form-groups{ 
+            width: 50%; 
+            &:last-of-type { margin: 3px 0 0 2.56%;}
+
+            .form-group {
+                @extend %display-flex;
+                @extend %flex-direction-column;
+                position: relative;
+
+                label {
+                    margin-bottom: 5px;
+                    font-size: 13px;
+                    text-align: left;
+                }
+
+                textarea,
+                .form-group input,
+                #enquiries {
+                    @extend %box-sizing-border-box;
+                    width: 100%;
+                    padding: 10px 1.2%;
+                    margin-bottom: 15px;
+                    border: none;
+                    background: #ffffff;
+                }
+                
+                #enquiries { 
+                    color: #555555;
+                    font-size: 12px;
+                    margin-top: 4px;
+                    padding: 9px 1.2%;
+                }
+
+                textarea,
+                .form-group input:focus ,
+                #enquiries:focus { outline: none; }
+                
+                .error{ 
+                    position: absolute;
+                    top: 2px;
+                    right: 0.1%;
+                    color: #ff5555;
+                    font: 14px "Arial Narrow";
+                }
+                
+                textarea{ min-height: 86px; }
+            }
+
+            .checkbox-group{ 
+                @extend %flex-direction-row; 
+                a{ color: $prime-color; }
+
+                input{ 
+                    width: 2.5%;
+                    @include transform(-4px, -4px);
+                }
+
+                label{
+                    display: inline;
+                    line-height: 18px;
+                    margin: 0;
+                }
+            }
+
+            p {
+                margin: 9px 1% 10px;
+                font-size: 12px;
+                line-height: 1.4;
+                text-align: left;
+            }
+
+            .form-control{
+
+                &:last-of-type {
+                    width: 100%;
+                    display: inline-block;
+                }
+
+                #submit {
+                    margin: 13px 3.8% 0 0;
+                    padding: 11px 5.2%;
+                    border: 1px solid transparent;
+                    background: $prime-color;
+                    color: #ffffff;
+                    font: 600 11px $font-family;
+                    right: 2%;
+                    float: right;
+                    @include set-transition( all .15s ease-in-out );
+                    outline: none;
+                  } 
+            }
+        }
+    }
+}
+   
+.form-sumit-modal{
+    @extend %box-sizing-border-box;
+    width: 50%;
+    padding: 40px 5%;
+    margin: 50vh 0 0 50%;
+    background-color: #ffffff;
+    border-radius: 25px;
+    font: 25px $font-family;
+    line-height: 35px;
+    @include transform(-50%, -50%);
+
+    p{ color: $base-font-color; }
+    name{ color: $prime-color; }
+
+    a{ 
+        margin: 35px 0 0;
+        padding: 11px 5.2%;
+        border: 1px solid transparent;
+        background: $prime-color;
+        color: #ffffff;
+        font: 600 18px $font-family;
+    }
+}
+  
+/*======================================
+ Get in touch section styling ends here
+======================================*/
+  
+/*=================================
+ main styling ends here for index
+==================================*/

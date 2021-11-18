@@ -117,7 +117,7 @@ li {
   margin: 0 auto;
 }
 
-.work-with .clients, .work-with .affiliations .wrapper .affiliated-partners, .affiliations .wrapper .work-with .affiliated-partners, .latest-work .wrapper .portfolio, .services .wrapper .services-list, .banner .wrapper .slider, header .header-social-icons, header nav .nav-list, header .wrapper {
+.get-in-touch form .form-groups .form-group, .get-in-touch form, .work-with .clients, .work-with .affiliations .wrapper .affiliated-partners, .affiliations .wrapper .work-with .affiliated-partners, .latest-work .wrapper .portfolio, .services .wrapper .services-list, .banner .wrapper .slider, header .header-social-icons, header nav .nav-list, header .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -135,7 +135,9 @@ header nav .nav-list {
   justify-content: center;
 }
 
-.banner .wrapper .slider .slide .slide-content {
+.form-sumit-modal, .get-in-touch form .form-groups .form-group textarea,
+.get-in-touch form .form-groups .form-group .form-group input,
+.get-in-touch form .form-groups .form-group #enquiries, .banner .wrapper .slider .slide .slide-content {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
@@ -149,6 +151,20 @@ header nav .nav-list {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+.get-in-touch form .form-groups .form-group {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.get-in-touch form .form-groups .checkbox-group {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 /*=================================
@@ -590,3 +606,132 @@ header .header-social-icons .linkedin::after {
 /*========================================
  affiliations  section styling ends here
 ========================================*/
+/*=========================================
+ Get in touch section styling starts here
+=========================================*/
+.get-in-touch {
+  padding-bottom: 56px;
+  background: #003e59;
+  color: #ffffff;
+  text-align: center;
+}
+.get-in-touch h2 {
+  padding: 50px 0 31px 0;
+  font: 600 22px Arial;
+}
+.get-in-touch form .form-groups {
+  width: 50%;
+}
+.get-in-touch form .form-groups:last-of-type {
+  margin: 3px 0 0 2.56%;
+}
+.get-in-touch form .form-groups .form-group {
+  position: relative;
+}
+.get-in-touch form .form-groups .form-group label {
+  margin-bottom: 5px;
+  font-size: 13px;
+  text-align: left;
+}
+.get-in-touch form .form-groups .form-group textarea,
+.get-in-touch form .form-groups .form-group .form-group input,
+.get-in-touch form .form-groups .form-group #enquiries {
+  width: 100%;
+  padding: 10px 1.2%;
+  margin-bottom: 15px;
+  border: none;
+  background: #ffffff;
+}
+.get-in-touch form .form-groups .form-group #enquiries {
+  color: #555555;
+  font-size: 12px;
+  margin-top: 4px;
+  padding: 9px 1.2%;
+}
+.get-in-touch form .form-groups .form-group textarea,
+.get-in-touch form .form-groups .form-group .form-group input:focus,
+.get-in-touch form .form-groups .form-group #enquiries:focus {
+  outline: none;
+}
+.get-in-touch form .form-groups .form-group .error {
+  position: absolute;
+  top: 2px;
+  right: 0.1%;
+  color: #ff5555;
+  font: 14px "Arial Narrow";
+}
+.get-in-touch form .form-groups .form-group textarea {
+  min-height: 86px;
+}
+.get-in-touch form .form-groups .checkbox-group a {
+  color: #eb6137;
+}
+.get-in-touch form .form-groups .checkbox-group input {
+  width: 2.5%;
+  -webkit-transform: translate(-4px, -4px);
+  -ms-transform: translate(-4px, -4px);
+  transform: translate(-4px, -4px);
+}
+.get-in-touch form .form-groups .checkbox-group label {
+  display: inline;
+  line-height: 18px;
+  margin: 0;
+}
+.get-in-touch form .form-groups p {
+  margin: 9px 1% 10px;
+  font-size: 12px;
+  line-height: 1.4;
+  text-align: left;
+}
+.get-in-touch form .form-groups .form-control:last-of-type {
+  width: 100%;
+  display: inline-block;
+}
+.get-in-touch form .form-groups .form-control #submit {
+  margin: 13px 3.8% 0 0;
+  padding: 11px 5.2%;
+  border: 1px solid transparent;
+  background: #eb6137;
+  color: #ffffff;
+  font: 600 11px Arial;
+  right: 2%;
+  float: right;
+  -webkit-transition: all 0.15s ease-in-out;
+  -o-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+  outline: none;
+}
+
+.form-sumit-modal {
+  width: 50%;
+  padding: 40px 5%;
+  margin: 50vh 0 0 50%;
+  background-color: #ffffff;
+  border-radius: 25px;
+  font: 25px Arial;
+  line-height: 35px;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.form-sumit-modal p {
+  color: #3c3b3b;
+}
+.form-sumit-modal name {
+  color: #eb6137;
+}
+.form-sumit-modal a {
+  margin: 35px 0 0;
+  padding: 11px 5.2%;
+  border: 1px solid transparent;
+  background: #eb6137;
+  color: #ffffff;
+  font: 600 18px Arial;
+}
+
+/*======================================
+ Get in touch section styling ends here
+======================================*/
+/*=================================
+ main styling ends here for index
+==================================*/
