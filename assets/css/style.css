@@ -117,13 +117,13 @@ li {
   margin: 0 auto;
 }
 
-.latest-work .wrapper .portfolio, .services .wrapper .services-list, .banner .wrapper .slider, header .header-social-icons, header nav .nav-list, header .wrapper {
+.work-with .clients, .latest-work .wrapper .portfolio, .services .wrapper .services-list, .banner .wrapper .slider, header .header-social-icons, header nav .nav-list, header .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-header .header-social-icons, header .wrapper {
+.work-with .clients, header .header-social-icons, header .wrapper {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
@@ -140,9 +140,15 @@ header nav .nav-list {
   box-sizing: border-box;
 }
 
-.services .wrapper .services-list {
+.work-with .clients, .services .wrapper .services-list {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+}
+
+.work-with .clients {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 /*=================================
@@ -489,4 +495,28 @@ header .header-social-icons .linkedin::after {
 
 /*======================================
   latest-work section styling ends here
+======================================*/
+/*=======================================
+  work with section styling starts here
+=======================================*/
+.work-with {
+  position: relative;
+  z-index: 1;
+  padding-bottom: 62px;
+  background: #eb6137;
+  text-align: center;
+}
+.work-with h2 {
+  padding: 46px 0 33px 0;
+  color: #ffffff;
+  font: 600 18px Arial;
+  text-transform: uppercase;
+}
+.work-with .clients .client {
+  width: 17.8%;
+  margin-bottom: 7px;
+}
+
+/*======================================
+ work with  section styling ends here
 ======================================*/

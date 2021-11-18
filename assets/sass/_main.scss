@@ -230,3 +230,38 @@
 /*======================================
   latest-work section styling ends here
 ======================================*/
+
+/*=======================================
+  work with section styling starts here
+=======================================*/
+
+.work-with {
+    position: relative;
+    z-index: 1;
+    padding-bottom: 62px;
+    background: $prime-color;
+    text-align: center;
+
+    h2 {
+        padding: 46px 0 33px 0;
+        color: #ffffff;
+        font: 600 18px $font-family;
+        text-transform: uppercase;
+    }
+
+    .clients {
+        @extend %display-flex;
+        @extend %justify-content-space-between;
+        @extend %align-items-center;
+        @extend %flex-wrap;
+
+        .client { 
+            width: 17.8%; 
+            margin-bottom: 7px;
+        }
+    }
+}
+
+/*======================================
+ work with  section styling ends here
+======================================*/
