@@ -908,19 +908,10 @@ footer h5 {
 /*media query starts*/
 /*media query for 1280px starts here*/
 @media only screen and (max-width: 1280px) {
-  .slider {
-    margin-top: 47px;
-  }
-
-  .slider-controls {
-    top: 19vw;
-  }
-
-  .slide-content {
+  .banner .wrapper .slider .slide .slide-content {
     top: 17vw;
   }
-
-  .slide a {
+  .banner .wrapper .slider .slide a {
     top: 26vw;
   }
 
@@ -931,39 +922,38 @@ footer h5 {
   .checkbox-group input {
     width: 15px;
   }
-
-  .job-categories {
-    width: 20%;
-  }
 }
 /*media query for 1024px starts here*/
 @media only screen and (min-width: 1024px) {
-  nav a:hover {
+  header .nav-list a:hover {
     color: #eb6137;
   }
-
-  .header-social-icons a:hover::after {
+  header .header-social-icons a:hover::after {
     color: #3c3b3b;
   }
 
-  .slider-controls a:hover {
-    color: #ffffff;
-  }
-
-  .slide a:hover {
+  .banner .wrapper .slide a:hover {
     background-color: #eb6137;
     color: #ffffff;
   }
-
-  .service-icon a:hover {
-    color: #ff5555;
+  .banner .wrapper .slider-controls {
+    top: 14vw;
+  }
+  .banner .wrapper .slider-controls a:hover::after {
+    color: #ffffff;
   }
 
   .portfolio-item:hover {
-    opacity: 0.8;
+    opacity: 0.5;
     -webkit-transform: translate(0, 18px);
     -ms-transform: translate(0, 18px);
     transform: translate(0, 18px);
+  }
+
+  .client:hover {
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
   }
 
   .affiliated-partner:hover {
@@ -974,40 +964,17 @@ footer h5 {
     box-shadow: 7px 7px #bbbbbb;
   }
 
-  .get-in-touch a:hover {
+  .get-in-touch form .form-groups a:hover {
     color: #ff5555;
   }
 
-  #submit:hover {
+  .get-in-touch form .form-groups .form-control #submit:hover {
     color: #3c3b3b;
     background-color: #ffffff;
   }
 
   footer a:hover {
     color: #eb6137;
-  }
-
-  .harvest-history a:hover {
-    color: #ffffff;
-    background-color: #eb6137;
-  }
-
-  .portfolio-btn a:hover {
-    color: #eb6137;
-  }
-
-  .portfolio-item-img img {
-    -webkit-transition: all 0.15s ease-in-out;
-    -o-transition: all 0.15s ease-in-out;
-    transition: all 0.15s ease-in-out;
-  }
-
-  .portfolio-item-img img:hover {
-    -webkit-transform: scale(0.98);
-    -ms-transform: scale(0.98);
-    transform: scale(0.98);
-    -webkit-box-shadow: 4px 4px #666666;
-    box-shadow: 4px 4px #666666;
   }
 }
 @media only screen and (max-width: 1024px) {
@@ -1022,8 +989,7 @@ footer h5 {
     transform: translate(0, 0);
   }
 
-  .opportunities .wrapper,
-.services .wrapper,
+  .services .wrapper,
 .affiliations .wrapper,
 .wrapper {
     width: 80%;
@@ -1031,66 +997,27 @@ footer h5 {
 }
 /*media query for 995px starts here*/
 @media only screen and (max-width: 995px) {
-  .portfolio::before,
-.portfolio::after {
+  .latest-work .wrapper .portfolio::before, .latest-work .wrapper .portfolio::after {
     content: none;
   }
-
-  .portfolio-item-img {
+  .latest-work .wrapper .portfolio .portfolio-item-img {
     width: 33.3%;
-  }
-
-  .opportunities .wrapper {
-    width: 90%;
-  }
-
-  .benefits-perks .perk {
-    width: 50%;
-  }
-
-  .perk:nth-child(3n) figure {
-    width: 17%;
-  }
-
-  .perk:nth-child(3n) span {
-    margin-left: 3.2%;
-  }
-
-  .harvest-values .wrapper {
-    width: 95%;
-  }
-
-  .harvest-value {
-    width: 17%;
-    min-height: 170px;
-    margin: 2px 1%;
-    padding: 0 0.5%;
   }
 }
 /*media query for 720px starts here*/
 @media only screen and (max-width: 720px) {
-  .our-work-banner,
-.join-us-banner {
-    padding: 110px;
-    background-size: cover;
+  .latest-work .wrapper .portfolio {
+    flex-wrap: wrap;
   }
-
-  .portfolio-item-img {
+  .latest-work .wrapper .portfolio .portfolio-item {
     width: 50%;
-  }
-
-  .portfolio {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
   }
 
   .portfolio-item {
     width: 50%;
   }
 
-  .services .wrapper,
-.affiliations .wrapper,
+  .affiliations .wrapper,
 .wrapper {
     width: 70%;
   }
@@ -1109,28 +1036,23 @@ footer h5 {
     transform: translate(0, 0);
   }
 
-  .form-groups {
+  .get-in-touch form .form-groups {
     width: 100%;
   }
-
-  .form-groups:last-of-type {
+  .get-in-touch form .form-groups:last-of-type {
     margin: 0;
   }
 
-  .affiliated-partner {
-    width: 48%;
-  }
-
-  .client {
-    width: 34%;
-  }
-
-  .service-item {
+  .services .wrapper .services-list .service-item {
     width: 50%;
   }
 
-  .opportunities .wrapper {
-    width: 98%;
+  .affiliations .wrapper .affiliated-partners .affiliated-partner {
+    width: 48%;
+  }
+
+  .work-with .clients .client {
+    width: 34%;
   }
 
   .slide-content {
@@ -1158,15 +1080,13 @@ footer h5 {
     position: static;
   }
 
-  .hide-me-mobile {
+  .wrapper .hide-me-mobile {
     display: none;
   }
-
-  nav {
+  .wrapper nav {
     width: 0;
   }
-
-  .nav-list {
+  .wrapper nav .nav-list {
     width: 100vw;
     height: 100vh;
     position: fixed;
@@ -1181,29 +1101,23 @@ footer h5 {
     text-align: center;
     background-color: #3c3b3b;
   }
-
-  .get-in-touch-company ul {
-    width: 90%;
-  }
-
-  .nav-list li {
+  .wrapper nav .nav-list li {
     padding: 10px;
   }
-
-  .nav-list a {
+  .wrapper nav .nav-list li a {
     color: #efefef;
   }
-
-  .header-social-icons {
-    width: auto;
+  .wrapper .header-social-icons {
+    width: 50px;
     padding: 0;
     position: fixed;
     z-index: 4;
     bottom: 50px;
-    left: 50%;
-    -webkit-transform: translate(-50%, 0);
-    -ms-transform: translate(-50%, 0);
-    transform: translate(-50%, 0);
+    left: 49.3%;
+  }
+
+  .get-in-touch-company ul {
+    width: 90%;
   }
 
   nav::after {
@@ -1212,7 +1126,7 @@ footer h5 {
     z-index: 4;
     top: 10px;
     right: 10px;
-    color: #3c3b3b;
+    color: #eb6137;
     font-family: FontAwesome;
     font-size: 28px;
     cursor: pointer;
@@ -1222,60 +1136,15 @@ footer h5 {
     position: fixed;
     content: "\f00d";
   }
-
-  .harvester-content p {
-    width: 100%;
-    text-align: center;
-  }
-
-  .harvester-content figure {
-    width: 80%;
-    -webkit-transform: translate(0, 0);
-    -ms-transform: translate(0, 0);
-    transform: translate(0, 0);
-  }
-
-  .values,
-.harvester-content {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-  }
-
-  .harvest-value {
-    width: 40%;
-  }
-
-  .jobs {
-    margin: 20px 2%;
-  }
-
-  .job {
-    letter-spacing: 0.2px;
-  }
-
-  .job-details {
-    float: none;
-    width: 100%;
-    -webkit-box-pack: start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
-    width: 100%;
-    padding: 8px 0 0;
-  }
 }
 /*media query for 540px starts here*/
 @media only screen and (max-width: 540px) {
-  .services .wrapper,
-.affiliations .wrapper,
-.wrapper {
+  main .services .wrapper,
+main .affiliations .wrapper,
+main .wrapper {
     width: 90%;
   }
-
-  .work-with .wrapper {
+  main .work-with .wrapper {
     width: 70%;
   }
 
@@ -1317,15 +1186,5 @@ footer h5 {
     -webkit-transform: translate(-50%, 0);
     -ms-transform: translate(-50%, 0);
     transform: translate(-50%, 0);
-  }
-
-  .our-work-banner,
-.join-us-banner {
-    padding: 80px;
-  }
-
-  .benefits-perks .perk {
-    width: 70%;
-    margin-left: 20%;
   }
 }
